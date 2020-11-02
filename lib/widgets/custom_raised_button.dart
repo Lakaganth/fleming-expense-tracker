@@ -40,7 +40,7 @@ class CustomRaisedButtton extends StatelessWidget {
           child: Text(
             buttonText,
             style: GoogleFonts.roboto(
-              color: Colors.white70,
+              color: buttonTextColor,
               fontSize: 20.0,
             ),
           ),

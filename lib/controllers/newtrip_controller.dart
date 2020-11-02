@@ -31,13 +31,14 @@ class NewtripController extends GetxController {
         origin: originController.text,
         homeCurrency: homeCurrencyController.text,
         destinationCurrency: destinationCurrencyController.text,
-        travelBudget: double.parse(travelBudgetController.text),
-        foodBudget: double.parse(tripnameController.text),
-        projBudget: double.parse(projBudgetController.text),
+        // travelBudget: double.parse(travelBudgetController.text),
+        // foodBudget: double.parse(tripnameController.text),
+        // projBudget: double.parse(projBudgetController.text),
       );
 
       // Add to DB
-      await _db.doc('/trip/').set(tripModel.toJson());
+      // await _db.doc('/trip/').set(tripModel.toJson());
+      await _db.collection("trip").add(tripModel.toJson());
 
       Get.snackbar(
           'Success', 'New Trip to ${tripModel.destination} has been created');

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fleming_expense_tracker/model/user_model.dart';
+import 'package:fleming_expense_tracker/screens/1.splash_screens/onboarding_screen.dart';
 import 'package:fleming_expense_tracker/screens/2.authenitication/login_screen.dart';
 import 'package:fleming_expense_tracker/screens/3.dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ class AuthController extends GetxController {
       firestoreUser.bindStream(streamFirestoreUser());
     }
     if (_firebaseUser == null) {
-      Get.offAll(LoginScreen());
+      Get.offAll(OnboardingScreen());
     } else {
       Get.offAll(DashboardScreen());
     }
