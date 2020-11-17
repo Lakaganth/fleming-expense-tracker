@@ -22,7 +22,7 @@ List<SidebarItem> sidebarItem = [
       ],
     ),
     icon: Icon(
-      Icons.bento,
+      Icons.clear,
       color: Colors.white,
     ),
   ),
@@ -38,7 +38,7 @@ List<SidebarItem> sidebarItem = [
     ),
   ),
   SidebarItem(
-    title: "Settings",
+    title: "Currency Converter",
     background: LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
@@ -57,7 +57,7 @@ List<SidebarItem> sidebarItem = [
       colors: [Color(0xFFEF3428), Color(0xFF6B2925)],
     ),
     icon: Icon(
-      Platform.isAndroid ? Icons.logout : CupertinoIcons.back,
+      Platform.isAndroid ? Icons.close : CupertinoIcons.back,
       color: Colors.white,
     ),
   ),

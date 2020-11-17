@@ -2,6 +2,7 @@ import 'package:fleming_expense_tracker/constants/constants.dart';
 import 'package:fleming_expense_tracker/controllers/user_controller.dart';
 import 'package:fleming_expense_tracker/screens/1.splash_screens/onboarding_screen.dart';
 import 'package:fleming_expense_tracker/screens/3.dashboard/sidebar_screen.dart';
+import 'package:fleming_expense_tracker/screens/3.dashboard/user_trips.dart';
 import 'package:fleming_expense_tracker/services/user_database.dart';
 import 'package:fleming_expense_tracker/widgets/navbar.dart';
 import 'package:flutter/material.dart';
@@ -81,24 +82,23 @@ class _DashboardScreenState extends State<DashboardScreen>
                 child: Stack(
                   children: [
                     SafeArea(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            Navbar(triggerAnimation),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 18.0),
-                                  child: Text(
-                                    // "Hello",
-                                    "Hello, ${authController.firestoreUser.value.name.capitalizeFirst}",
-                                    style: kLargeHeading,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
+                      child: Column(
+                        children: [
+                          Navbar(triggerAnimation),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 18.0),
+                                child: Text(
+                                  // "Hello",
+                                  "Hello, ${authController.firestoreUser.value.name.capitalizeFirst}",
+                                  style: kLargeHeading,
+                                ),
+                              ),
+                            ],
+                          ),
+                          UserTrips(),
+                        ],
                       ),
                     ),
                     IgnorePointer(

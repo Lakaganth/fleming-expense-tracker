@@ -1,7 +1,9 @@
 import 'package:fleming_expense_tracker/constants/constants.dart';
 import 'package:fleming_expense_tracker/controllers/auth_controller.dart';
 import 'package:fleming_expense_tracker/model/sidebar_model.dart';
-import 'package:fleming_expense_tracker/screens/4.new_trip/add_new_trip.dart';
+// import 'package:fleming_expense_tracker/screens/4.new_trip/add_new_trip.dart';
+import 'package:fleming_expense_tracker/screens/4.new_trip/create_new_trip.dart';
+import 'package:fleming_expense_tracker/screens/5.currency_converter/currency_converter_screen.dart';
 import 'package:fleming_expense_tracker/widgets/custom_raised_button.dart';
 import 'package:fleming_expense_tracker/widgets/sidebar_row.dart';
 import 'package:flutter/material.dart';
@@ -68,13 +70,17 @@ class SidebarScreen extends StatelessWidget {
             ),
             FlatButton(
                 onPressed: () {
-                  Get.to(AddNewTrip());
+                  Get.to(CreateNewTrip());
                 },
                 child: SidebarRow(item: sidebarItem[1])),
             SizedBox(
               height: 32.0,
             ),
-            SidebarRow(item: sidebarItem[2]),
+            FlatButton(
+                onPressed: () {
+                  Get.to(CurrencyConverterScreen());
+                },
+                child: SidebarRow(item: sidebarItem[2])),
             SizedBox(
               height: 32.0,
             ),

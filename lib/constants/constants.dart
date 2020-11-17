@@ -44,3 +44,9 @@ var kLargeHeading = GoogleFonts.roboto(
   fontSize: 28.0,
   fontWeight: FontWeight.w800,
 );
+
+var kNewTripFormLabelGreen = GoogleFonts.quicksand(
+  fontSize: 20.0,
+  color: Color(0XFFA6E28A),
+  fontWeight: FontWeight.bold,
+);
